@@ -1,8 +1,15 @@
 ---
 - hosts: app
   become: yes
+  
   tasks:
    - name: install packages
      apt:
       name: nginx
       state: latest
+   
+   - name:  install apache2
+     apt: 
+      name: apache2
+      state: present
+
