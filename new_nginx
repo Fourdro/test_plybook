@@ -1,0 +1,8 @@
+---
+- hosts: app
+  become: yes
+  tasks:
+   - name: install packages
+     apt:
+      name: nginx
+      state: latest
