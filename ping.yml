@@ -1,0 +1,12 @@
+---
+- hosts: test
+
+  name: test conection
+  become: false
+
+  tasks: 
+   - name: ping
+     ping:
+
+   - name: check OS
+     debug: msg={{ansible_distribution}}-{{ansible_distribution_version}}-{{ansible_distribution_release}}
